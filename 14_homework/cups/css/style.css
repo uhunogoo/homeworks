@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap');
+:root {
+	--baseFontFamily: 'Open Sans', sans-serif;
+	--baseFontSize: 16px;
+	--baseGreen: #02995B;
+	--baseGray: #BCBCBC;
+	--baseShadow: 0 4px 8px rgba(0,0,0, .1);
+	--hoverShadow: 0 4px 13px rgba(0,0,0, .12);
+	--largeFont: 4.3rem;
+	--baseTitle: 3.5rem;
+	--baseParagraph: 1.1rem;
+	--baseTransition: .2s linear;
+}
+html {
+	font-size: var(--baseFontSize);
+}
+
+body { 
+	font-family: var(--baseFontFamily);
+	font-size: 1rem;
+	margin: 0;
+}
+
+* {
+	appearance: none;
+	box-sizing: border-box;
+	transition: var(--baseTransition);
+}
+
+.container {
+	padding: 0 10px;
+	margin: 0 auto;
+	max-width: 1120px;
+	width: 100%;
+}
+.content-row {
+	margin: 0 -10px;
+}
+
+/* cup block */
+.cup-block {
+	margin-bottom: 20px;
+	text-align: center;
+}
+.cup-block_primary-theme {
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	--webkit-box-shadow: var(--baseShadow);
+	box-shadow: var(--baseShadow);
+	cursor: pointer;
+	padding: 40px 0;
+}
+
+.cup-block__price_large-green {
+	color: var(--baseGreen);
+	font-size: var(--largeFont);
+	font-weight: 500;
+}
+.cup-block__image {
+	margin: 0 auto;
+	max-width: 236px;
+	width: 100%;
+}
+.cup-block__image img {
+	height: auto;
+	width: 100%;
+}
+.cup-block__title {
+	font-size: var(--baseTitle);
+	font-weight: 500;
+	margin:0 0 25px;
+}
+
+.cup-block__description_small {
+	margin: 0 auto;
+	max-width: 140px;
+	width: 100%;
+}
+.cup-block__description_ligth {
+	color: var(--baseGray);
+}
+
+/* media query */
+@media screen and (min-width: 570px) {
+	.content-row {
+		align-items: center;
+		display: flex;
+		flex-wrap: wrap;
+		min-height: 100vh;
+	}
+	.content-row__col {
+		padding: 0 10px;
+	}
+	.content-row__col_sm-6 {
+		flex: 0 0 50%;
+	}
+}
+@media screen and (min-width: 768px) {
+	.content-row__col_md-4 {
+		flex: 0 0 33.333333%;
+	}
+}
+@media screen and (min-width: 992px) {
+	.cup-block_primary-theme:hover {
+		box-shadow: var(--hoverShadow);
+	}
+	.cup-block_primary-theme:hover img {
+		-webkit-transform: scale(1.08);
+		-moz-transform: scale(1.08);
+		transform: scale(1.08);
+	}
+	.cup-block_md-large {
+		padding: 70px 0;
+	}
+}
