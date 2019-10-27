@@ -1,0 +1,16 @@
+.content-row {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	@include e(col) {
+		box-sizing: border-box;
+		@include m(md) {
+			&-8 {
+				flex: 0 0 100%;
+			}
+			&-4 {
+				flex: 0 0 50%;
+			}
+		}
+	}
+}
