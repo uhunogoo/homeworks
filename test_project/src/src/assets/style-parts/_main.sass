@@ -1,0 +1,44 @@
+$baseFontSize: 16px
+$baseBlue: #1FB4D5
+$green: #28a745
+$light_orange: #F7F4F0
+$dark: #454545
+$rose: #FFACA7
+
+$light_dark: #161520
+$light_blue: #CAF8FA
+// font family
+$roboto: 'Roboto', sans-serif
+$openSans: 'Open Sans', sans-serif
+*, ::after, a, img
+	transition: .2s ease-in-out
+	-webkit-transition: .2s ease-in-out
+
+html
+	font-size: $baseFontSize
+body
+	background: #fff
+	cursor: default
+	font-family: $openSans
+	font-size: 1rem
+	font-weight: 200
+	margin: 0
+	padding: 0
+*
+	box-sizing: border-box
+a
+	text-decoration: none !important
+ul
+	+reset-list
+p 
+	font-size: .92rem
+.img-wrapper
+	img
+		height: auto
+		width: 100%
+// headers
+.section-title
+	text-transform: capitalize
+h3
+	font-size: 1.6rem
+	font-weight: 700

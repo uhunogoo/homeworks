@@ -1,0 +1,40 @@
+=angle($property, $col)
+	border: $property solid transparent
+	border-right: $property solid $col
+	border-top: $property solid $col
+
+=reset-list
+  margin: 0
+  padding: 0
+  list-style: none
+=content
+	margin: 0 auto
+	max-width: 1400px
+	padding: 0 15px
+	width: 100%
+=row
+	display: flex
+	flex-direction: row
+	flex-wrap: wrap
+	@content
+=pseudoEl($el)
+	&::#{$el}
+		display: block
+		content: ''
+		@content
+// media query
+=sm
+	@media (min-width: 570px)
+		@content
+=md
+	@media (min-width: 768px)
+		@content
+=lg
+	@media (min-width: 992px)
+		@content
+=xl
+	@media (min-width: 1200px)
+		@content
+=betweenBreaks($min, $max)
+	@media (min-width: $min) and (max-width: $max)
+		@content

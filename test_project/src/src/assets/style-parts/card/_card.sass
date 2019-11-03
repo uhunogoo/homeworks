@@ -1,0 +1,68 @@
+.card
+	margin-bottom: 30px
+	overflow: hidden
+	position: relative
+	&__title
+		font-size: 1.2rem
+		font-weight: normal
+		text-transform: uppercase
+		&_pencil
+			+pseudoEl(before)
+				background: $baseBlue url(../../static/images/sprite.svg) no-repeat 0 100%
+		&_layer
+			+pseudoEl(before)
+				background: $baseBlue url(../../static/images/sprite.svg) no-repeat 0 0
+		&_plane
+			+pseudoEl(before)
+				background: $baseBlue url(../../static/images/sprite.svg) no-repeat 100% 0
+		&_design
+			+pseudoEl(before)
+				background: $baseBlue url(../../static/images/sprite.svg) no-repeat 0 50%
+		&_icon
+			+pseudoEl(before)
+				background-size: 100px auto
+				border-radius: 50%
+				display: inline-block
+				height: 50px
+				margin-right: 15px
+				vertical-align: middle
+				width: 50px
+	&__button 
+		a
+			color: $baseBlue
+
+	&__image
+		cursor: pointer
+	&__footer
+		background: #fff
+		padding: 15px 0
+		.row
+			+row
+				justify-content: space-around
+		.icon
+			height: 50px
+			width: 50px
+			&_eye
+				background: url(../../static/images/sprite.svg) no-repeat 100% 50%
+				background-size: 100px auto
+			&_link
+				background: url(../../static/images/sprite.svg) no-repeat 100% 100%
+				background-size: 100px auto
+			+xl
+				&:hover
+					opacity: .4
+		+xl
+			bottom: 0
+			left: 0
+			position: absolute
+			transform: translateY(100%)
+			width: 100%
+	+xl
+		&_latest
+			&:hover
+				transform: scale(1.1)
+				.card__image
+					img
+						filter: blur(.15rem)
+				.card__footer
+					transform: translateY(10%)

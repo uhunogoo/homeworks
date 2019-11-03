@@ -1,0 +1,33 @@
+.navigation
+	padding: 33px 0
+	&__content
+		+content
+		&_row
+			+row
+				justify-content: space-between
+				align-items: center
+.site-title
+	font-size: 2rem
+	font-weight: normal
+	text-transform: capitalize
+	&__first 
+		&_bold
+			font-weight: 600
+	&__second 
+		&_blue
+			color: $baseBlue
+.menu
+	+row
+	&__item
+		display: none
+		padding: 0 15px
+		text-transform: uppercase
+		+lg
+			display: block
+	+pseudoEl(after)
+		content: "\f0c9"
+		font-family: "Font Awesome 5 Free"
+		font-weight: 900
+		+lg
+			display: none
+	
